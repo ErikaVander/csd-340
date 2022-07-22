@@ -47,23 +47,39 @@ img{
    background-repeat: no-repeat;
    background-size: cover;
    overflow: hidden;
-   margin-top: 0 auto;
 }
 #intro-right-div {
    position:absolute;
-   top:0;
    width: 100vw;
-   height: 70vh;
-   background-color: gray;
+   height: 80vh;
+   background-color: rgb(0, 0, 0);
+   transition: 1s;
 }
 #intro-right-div h1{
+   /* font-size: 200px; */
    left: 50px;
    top: 300px;
-}
-#intro-right-div:hover h1{
    transition: 1s;
-   font-size: 100px;
-   top: 55px;
+   font-size: 200px;
+   top: 150px;
+}
+#intro-right-div:hover h1 {
+   transition: 1s;
+   font-size: 200px;
+   top: 150px;
+}
+#intro-right-div p {
+   position: absolute;
+   top:400px;
+   left: 70px;
+   font-size: 50px;
+   color: gray;
+   transition: 1s;
+}
+#intro-right-div:hover p {
+   top:340px;
+   transition: 1s;
+   color: white;
 }
 #intro-left-div {
    position: absolute;
@@ -71,12 +87,12 @@ img{
    height: 30vh;
    width: 100vw;
    transition: 1s;
-   background-color: gray;
+   background-color: rgb(117, 117, 117);
    border:0px;
 }
 #intro-left-div:hover{
-   box-shadow: 10 0 0 0 darkgray;
-   height:50vh;
+   /* height:23vh; */
+   height: 35vh;
    transition: 1s;
    bottom: 10px;
 }
@@ -87,17 +103,6 @@ img{
    position: absolute;
    bottom: 50px;
    left: 50px;
-   border-color: white;
-}
-#intro-left-div:hover img {
-   width: 250px;
-   height: 250px;
-   transition: 1s;
-}
-#intro-left-div:hover h1 {
-   left: 325px;
-   font-size: 100px;
-   transition: 1s;
 }
 .grid-container {
    width: 70%;
@@ -114,13 +119,18 @@ img{
    border-top-right-radius: 50px;
    border-top-left-radius: 50px;
    padding-top: 50px;
-   font-size: 15px;
+   font-size: 20px;
 }
 .card:hover {
    width: 450px;
    height: auto;
    transition: 1s;
-   font-size: 25px;
+   font-size: 22px;
+}
+.card img {
+   border-style: solid;
+   border-color: rgb(0, 0, 0);
+   border: 100px;
 }
 .card:hover img {
    width: 450px;
@@ -139,7 +149,8 @@ img{
    height: auto;
    width: 100%;
    padding-bottom: 175px;
-   background-color: rgb(167, 167, 167);
+   /* background-color: rgb(167, 167, 167); */
+   background-color: rgb(228, 228, 228);
 }
 #experience {
    height: auto;
