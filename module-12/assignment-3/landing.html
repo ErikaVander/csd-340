@@ -1,0 +1,206 @@
+<!--
+   Erika Vanderhoff
+   CSD-340
+   Assignment 12.3
+   07/21/2022
+-->
+
+<!DOCTYPE html>
+   <head>
+      <title>Personal Landing</title>
+      <link rel="stylesheet" type="text/css" href="images">
+      <link rel="stylesheet" type="text/css" href="landing.css">
+
+      <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,400&display=swap" rel="stylesheet"> -->
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div id="intro">
+         <div id="intro-container">
+            <div id="intro-img-div">
+               <img src="images/portrait.jpeg" id="imgPortrait">
+            </div>
+            <div id="intro-title-div">
+               <h1>Erika<br>Vanderhoff</h1>
+            </div>
+         </div>
+      </div>
+      <div id="container">
+         <div id="hobbies">
+            <div id="hobbies-title-box">
+               <h2>hobbies</h2>
+            </div>
+            <div class="grid-container">
+               <div class="card">
+                  <img src="images/fishOne.jpeg" id="imgFish"/>
+                  <div class="card-title">Fish</div>
+                  <p class="hobbies-p">
+                     I suppose I am now a fish hobbyist. This hobby is really fun and relaxing and gets 
+                     even more fun (and expensive) when your fish start to have fry. I currently have 
+                     one baby bristlenose pleco (possibly more hiding and along with three adolescent plecos), 
+                     and six angelfish fry. I have two tanks but would soon like to get a third to giv my 
+                     fry more room to grow.
+                  </p>
+               </div>
+               <div class="card">
+                  <div class="card-content">
+                     <img src="images/artOne.jpeg" id="imgArt"/>
+                     <div class="card-title">Art</div>
+                     <p class="hobbies-p">
+                        Art is something I have loved for a long time. Before learning about how exciting
+                        making a living as an artist can be, I actually wanted to be one. I don't do art as often now
+                        but I hope to continue to paint, draw, and sketch here and there in the future.
+                     </p>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-content">
+                     <img src="images/pianoOne.jpeg" id="imgPiano"/>
+                     <div class="card-title">Piano</div>
+                     <p class="hobbies-p">
+                        This hobby is one my mom chose for me and I am forever grateful. It is so awesome
+                        to be able to sit down and play a few pieces in the evenings to try reflect the sunset
+                        in my music. I had a classical teacher that taught me that one song can paint an 
+                        infinite number of pictures if played in different ways. She always asked me what
+                        picture I saw when I played a song.
+                     </p>
+                  </div>
+               </div>
+   
+               <script type = "text/javascript">
+                  let artArray = ['images/artOne.jpeg', 'images/artTwo.jpeg', 'images/artThree.jpeg']
+                  let fishArray = ['images/fishOne.jpeg', 'images/fishTwo.jpeg', 'images/fishThree.jpeg']
+                  let pianoArray = ['images/pianoOne.jpeg', 'images/pianoTwo.jpeg', 'images/pianoThree.jpeg']
+                  
+                  var fishHoverInterval = null;
+                  var artHoverInterval = null;
+                  var pianoHoverInterval = null;
+   
+                  var y = 1;
+                  var z = 1;
+                  var w = 1;
+   
+                  const art = document.getElementById('imgArt');
+                  const fish = document.getElementById('imgFish');
+                  const piano = document.getElementById('imgPiano');
+   
+                  fish.addEventListener("mouseover", function() {
+                     setTimeout(function() {
+                        fish.src = fishArray[y];
+                        y > 1 ? y = 0 : y++;
+                     }, 900);
+                     if (fishHoverInterval != null) {
+                        return;
+                     }
+                     fishHoverInterval = setInterval(function(){
+                        fish.src = fishArray[y];
+                        y > 1 ? y = 0 : y++;
+                     }, 3000);
+                  })
+                  fish.addEventListener("mouseout", function() {
+                     if (fishHoverInterval != null) {
+                        clearInterval(fishHoverInterval);
+                        fishHoverInterval = null;
+                     }
+                  })
+   
+                  art.addEventListener("mouseover", function() {
+                     setTimeout(function() {
+                        art.src = artArray[z];
+                        z > 1 ? z = 0 : z++;
+                     }, 900);
+                     if (artHoverInterval != null) {
+                        return;
+                     }
+                     artHoverInterval = setInterval(function(){
+                        art.src = artArray[z];
+                        z > 1 ? z = 0 : z++;
+                     }, 3000);
+                  })
+                  art.addEventListener("mouseout", function() {
+                     if (artHoverInterval != null) {
+                        clearInterval(artHoverInterval);
+                        artHoverInterval = null;
+                     }
+                  })
+   
+                  piano.addEventListener("mouseover", function() {
+                     setTimeout(function() {
+                        piano.src = pianoArray[w];
+                        w > 1 ? w = 0 : w++;
+                     }, 900)
+                     if (pianoHoverInterval != null) {
+                        return;
+                     }
+                     pianoHoverInterval = setInterval(function(){
+                        piano.src = pianoArray[w];
+                        w > 1 ? w = 0 : w++;
+                     }, 3000);
+                  })
+                  piano.addEventListener("mouseout", function() {
+                     if (pianoHoverInterval != null) {
+                        clearInterval(pianoHoverInterval);
+                        pianoHoverInterval = null;
+                     }
+                  })
+               </script>
+            </div>
+         </div>
+         <div id="experience">
+            <h2>experience</h2>
+            <div class="grid-container">
+               <div class="card">
+                  <div class="card-title">Vandersoft Internship</div>
+                  <div class="card-content">
+                     <ol>
+                        <li>Angular</li>
+                        <li>Cordova</li>
+                        <li>Ionic</li>
+                        <li>Updating App Packages</li>
+                        <li>HTML</li>
+                        <li>Typescript</li>
+                        <li>CSS</li>
+                     </ol>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-title">App Development</div>
+                  <div class="card-content">
+                     <ol>
+                        <li>Swift</li>
+                        <li>Storyboard</li>
+                        <li>Firebase</li>
+                        <li>Google Ads</li>
+                        <li>UI Design</li>
+                     </ol>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-title">Languages</div>
+                  <div class="card-content">
+                     <ol>
+                        <li>Java Script - Some Experience</li>
+                        <li>Python - Some Experience</li>
+                        <li>C# - Abstract Data Structures and Algorithms</li>
+                        <li>C++ - Abstract Data Structures and Algorithms</li>
+                        <li>Java - Some Experience</li>
+                        <li>Swift - App Development</li>
+                        <li>HTML - Some Experience</li>
+                        <li>CSS - Some Experience</li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div id="contact">
+            <p><script>document.write(new Date().getFullYear())</script> - Erika Vanderhoff<br>erikavander123@gmail.com</p>
+            <p id="button">
+               <!-- <a href ="mailto:erikavander123@gmail.com" target="_blank">erikavander123@gmail.com</a> -->
+            </p>
+            <button href="mailto:erikavander123@gmail.com">Send Message</button>
+         </div>
+      </footer>
+   </body>
+</html>
